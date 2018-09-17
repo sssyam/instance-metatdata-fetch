@@ -10,4 +10,4 @@ Will Update to run as a normal user.
 ## SIN:
   - Hardcoded the directory
   - Used python's OS library's native function
-  - Did not create a daemon for it
+  - Did not create a daemon for it so will needs to be run as a cron job

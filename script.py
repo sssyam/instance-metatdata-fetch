@@ -13,7 +13,7 @@ def parse_MD(path, url):
             else:
                 with open(path + i,"w") as f:
                     content = str(requests.get(url + i).text)
-                       f.write(content + "\n")
+                    f.write(content + "\n")
 
 def main():
     url="http://instance-data/latest/meta-data/"
@@ -24,13 +24,13 @@ def main():
 
     start_time = datetime.datetime.utcnow().strftime("%d %B, %Y at %H:%M:%S UTC")
     with open(home+".start_time","w") as f:
-    f.write("Start Time: " + start_time + "\n")
+        f.write("Start Time: " + start_time + "\n")
 
     parse_MD(home, url)
 
     end_time = datetime.datetime.utcnow().strftime("%d %B, %Y at %H:%M:%S UTC")
     with open(home+".end_time","w") as f:
-    f.write("End Time: " + end_time + "\n")
+        f.write("End Time: " + end_time + "\n")
 
 if __name__ == "__main__":
-main()
+    main()

@@ -12,8 +12,8 @@ def parse_MD(path, url):
                 parse_MD(path+i, url+i)
         else:
             with open(path + i,"w") as f:
-            content = str(requests.get(url + i).text)
-            f.write(content + "\n")
+                content = str(requests.get(url + i).text)
+                f.write(content + "\n")
 
 def main():
     url="http://instance-data/latest/meta-data/"
